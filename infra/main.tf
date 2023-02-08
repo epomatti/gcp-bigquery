@@ -43,7 +43,3 @@ resource "google_sql_user" "users" {
   instance = google_sql_database_instance.main.name
   password = "changeme"
 }
-
-### 
-
-
