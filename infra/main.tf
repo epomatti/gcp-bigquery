@@ -14,11 +14,6 @@ provider "google" {
 
 ### MySQL ###
 
-resource "google_sql_database" "database" {
-  name     = "my-database"
-  instance = google_sql_database_instance.main.name
-}
-
 resource "google_sql_database_instance" "main" {
   name             = "my-database-instance"
   region           = "us-central1"
@@ -33,6 +28,11 @@ resource "google_sql_database_instance" "main" {
   }
 
   deletion_protection = false
+}
+
+resource "google_sql_database" "database" {
+  name     = "my-database"
+  instance = google_sql_database_instance.main.name
 }
 
 resource "google_sql_user" "users" {
