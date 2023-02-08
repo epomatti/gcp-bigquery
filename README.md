@@ -13,6 +13,7 @@ project_id = "nodal-algebra-355718"
 region     = "us-central1"
 ```
 
+automated backups + enabled point-in-time recovery
 
 Need to enable Dataflow
 

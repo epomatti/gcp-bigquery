@@ -24,6 +24,10 @@ resource "google_sql_database_instance" "main" {
         value = "0.0.0.0/0"
       }
     }
+    backup_configuration {
+      enabled            = true
+      binary_log_enabled = true
+    }
   }
 
   deletion_protection = false
