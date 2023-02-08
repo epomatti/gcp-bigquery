@@ -19,4 +19,7 @@ VALUES
 	
 commit;
 
-select * from Orders;
+-- This user is required for Datastream
+CREATE USER 'datastream'@'%' IDENTIFIED BY 'p4ssw0rd';
+GRANT REPLICATION SLAVE, SELECT, RELOAD, REPLICATION CLIENT, LOCK TABLES, EXECUTE ON *.* TO 'datastream'@'%';
+FLUSH PRIVILEGES;
