@@ -14,3 +14,13 @@ region     = "us-central1"
 ```
 
 
+Need to enable Dataflow
+
+
+# BigQuery
+
+create repository
+
+grant bigquery user permission `roles/bigquery.user`
+
+create workspace
