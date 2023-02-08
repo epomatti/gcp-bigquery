@@ -25,9 +25,14 @@ resource "google_sql_database_instance" "main" {
   database_version = "MYSQL_8_0"
   settings {
     tier = var.database_tier
+    ip_configuration {
+      authorized_networks {
+        value = "0.0.0.0/0"
+      }
+    }
   }
 
-  deletion_protection = "true"
+  deletion_protection = false
 }
 
 resource "google_sql_user" "users" {
@@ -36,4 +41,4 @@ resource "google_sql_user" "users" {
   password = "changeme"
 }
 
-###
+### 
