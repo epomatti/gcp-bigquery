@@ -13,9 +13,12 @@ gcloud auth application-default login
 Create the `.auto.tfvars` parameter:
 
 ```hcl
-project_id    = "<project_id>"
-region        = "us-central1"
-database_tier = "db-g1-small"
+project_id        = "<project_id>"
+region            = "us-central1"
+database_tier     = "db-g1-small"
+database_username = "dbadmin"
+database_password = "p4ssw0rd"
+
 ```
 
 Create the database:
