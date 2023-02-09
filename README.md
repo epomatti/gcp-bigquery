@@ -10,6 +10,8 @@ Make sure to login with gcloud:
 gcloud auth application-default login
 ```
 
+First `cd` into the infra directory.
+
 Create the `.auto.tfvars` parameter:
 
 ```hcl
