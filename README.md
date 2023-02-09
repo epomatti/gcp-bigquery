@@ -15,7 +15,7 @@ Create the `.auto.tfvars` parameter:
 ```hcl
 project_id    = "<project_id>"
 region        = "us-central1"
-database_tier = "db-f1-micro"
+database_tier = "db-g1-small"
 ```
 
 Create the database:
